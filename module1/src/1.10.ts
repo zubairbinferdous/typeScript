@@ -24,11 +24,19 @@
 
   type FrontendDevelopers = {
     skills: string[];
-    des: "Front end developer";
+    des1: "Front end developer";
   };
 
   type BackendDevelopers = {
     skills: string[];
-    des: "Back end developer";
+    des2: "Back end developer";
+  };
+
+  type Full = FrontendDevelopers & BackendDevelopers;
+
+  const developer: Full = {
+    skills: ["html", "css", "js"],
+    des1: "Front end developer",
+    des2: "Back end developer",
   };
 }
