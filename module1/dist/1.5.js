@@ -6,3 +6,4 @@ const user = {
     lastName: "khan",
 };
 user.firstName = "labiba";
+user.lastName = "joy roy";
