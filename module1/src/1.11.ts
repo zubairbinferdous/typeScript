@@ -19,4 +19,25 @@
   console.log(res1);
 
   // optional chaining
+  type User = {
+    name: string;
+    address: {
+      city: string;
+      road: string;
+      presentAddress: string;
+      permanentAddress?: string;
+    };
+  };
+
+  const user: User = {
+    name: "zubair",
+    address: {
+      city: "dhaka",
+      road: "gandArea",
+      presentAddress: "this is good for me ",
+    },
+  };
+
+  const Address = user?.address?.permanentAddress ?? "there is no address";
+  console.log({ Address });
 }
