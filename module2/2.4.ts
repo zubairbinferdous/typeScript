@@ -1,7 +1,7 @@
 {
   // interface generic
 
-  interface Developer<T> {
+  interface Developer<T, X = null> {
     name: string;
     computer: {
       brand: string;
@@ -9,13 +9,19 @@
       releaseYear: number;
     };
     smartWatch: T;
+    bike?: X;
   }
 
-  const user: Developer<> = {
+  type watch1 = {
+    brand: string;
+    model: string;
+  };
+
+  const user1: Developer<watch1> = {
     name: "zubair",
     computer: {
       brand: "asd",
-      module: "live",
+      model: "live",
       releaseYear: 2018,
     },
     smartWatch: {
@@ -24,16 +30,33 @@
     },
   };
 
-  const user2: Developer<> = {
+  interface apple {
+    brand: string;
+    model: string;
+    heartTrack: true;
+    sleepTrack: false;
+  }
+
+  type bike = {
+    bikeName: string;
+    modelBike: string;
+  };
+  const user2: Developer<apple, bike> = {
     name: "zubair khan",
     computer: {
       brand: "ReadMe",
-      module: "live-009",
+      model: "live-009",
       releaseYear: 2030,
     },
     smartWatch: {
       brand: "apple watch ",
       model: "X-mel",
+      heartTrack: true,
+      sleepTrack: false,
+    },
+    bike: {
+      bikeName: "hello bike xpo",
+      modelBike: "hello Bike",
     },
   };
 
